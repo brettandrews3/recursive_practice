@@ -21,7 +21,10 @@ def is_palindrome(word):
     else:
         if word[0] == word[-1]:
             # recursion stuff
-        
-        
+            return is_palindrome(word[1:-1])
         else:
             return False
+
+words = ['tacocat', 'radar', 'yak', 'rader', 'kayak', 'kayek']
+for word in words:
+    print(word, is_palindrome(word))
